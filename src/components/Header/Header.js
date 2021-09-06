@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Container from "../Controls/Container/Container";
 
+
 const HeaderSection = styled.section`
   background-image: linear-gradient(
     to right top,

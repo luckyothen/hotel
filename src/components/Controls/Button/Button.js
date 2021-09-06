@@ -10,12 +10,14 @@ const ButtonGeneral = styled.button`
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  text-align:center;
+  justify-content: center;
 
   &:hover {
     cursor: pointer;
   }
 `;
 
-export default function Button({ children }) {
-  return <ButtonGeneral>{children}</ButtonGeneral>;
+export default function Button({ children, bgColor, color }) {
+  return <ButtonGeneral bgColor={bgColor} color={color}>{children}</ButtonGeneral>;
 }

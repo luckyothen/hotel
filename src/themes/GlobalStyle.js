@@ -21,15 +21,7 @@ const GlobalStyle = createGlobalStyle`
    
    }
 
-   .container{
-       max-width: 80%;
-       margin: 0 auto;
-       overflow: hidden;
-   }
-
-
-
-
+   
 `;
 
 export default GlobalStyle;

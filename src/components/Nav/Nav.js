@@ -54,7 +54,7 @@ const StarIcon = styled(StarFill)`
   color: #ffb300;
 
   &:not(:last-of-type) {
-    margin-right: 0.2rem;
+    margin-right: 0.1rem;
   }
 `;
 
@@ -85,13 +85,13 @@ export default function Nav() {
         </BrandingWrapper>
         <ListGroup>
           <ListGroupItem>
-            Home <ArrowDownIcon size="14" />
+            Home <ArrowDownIcon size="16" />
           </ListGroupItem>
           <ListGroupItem>
-            Rooms <ArrowDownIcon size="14" />
+            Rooms <ArrowDownIcon size="16" />
           </ListGroupItem>
           <ListGroupItem>
-            Contact Us <ArrowDownIcon size="14" />
+            Contact Us <ArrowDownIcon size="16" />
           </ListGroupItem>
           <ListGroupItem>
             <Button>
