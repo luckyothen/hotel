@@ -1,9 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "../Controls/Container/Container";
+import Nav from '../Nav/Nav';
+import HeaderTitle from "../HeaderTitle/HeaderTitle";
+import BookingBar from "../BookingBar/BookingBar";
 
 
-const HeaderSection = styled.section`
+
+const HeaderStyled = styled.section`
   background-image: linear-gradient(
     to right top,
     #9e5872,
@@ -18,8 +22,12 @@ const HeaderSection = styled.section`
 
 export default function Header(props) {
   return (
-    <HeaderSection>
-      <Container>{props.children}</Container>
-    </HeaderSection>
+    <HeaderStyled>
+      <Container>
+        <Nav />
+        <HeaderTitle />
+        <BookingBar />
+      </Container>
+    </HeaderStyled>
   );
 }

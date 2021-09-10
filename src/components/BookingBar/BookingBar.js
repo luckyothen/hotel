@@ -6,7 +6,8 @@ const BookingBarStyled = styled.div`
 background-color: #fff;
 padding: 2rem 1rem;
 display: flex;
-
+ 
+margin-top: 1.5rem;
  > *{
   width: 100%;  
 }
@@ -17,7 +18,7 @@ background-color: #E7E5E4;
 color: #939393;
 outline: none;
 border:1px solid #E0DFDE;
-padding: 1rem;
+padding: .7rem;
 text-transform: uppercase;
 margin-right: 1rem;
 cursor: pointer;
@@ -29,7 +30,7 @@ background-color: #E7E5E4;
 color: #939393;
 outline: none;
 border:1px solid #E0DFDE;
-padding: 1rem;
+padding: .7rem;
 text-transform: uppercase;
 margin-right: 1rem;
 cursor: pointer;
@@ -58,7 +59,7 @@ export default function BookingBar() {
                 <option value="4">4</option>
                 <option value="5">5</option>
             </SelectStyled>
-            <Button bgColor="#F8C11D">Book A Room</Button>
+            <Button bgColor="#1DC1F8"  >Book A Room</Button>
         </BookingBarStyled>
     )
 }

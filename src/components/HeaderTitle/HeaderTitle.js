@@ -6,18 +6,18 @@ const HeaderTitleWrapper = styled.div`
     flex-direction: column;
     align-items:center;
     justify-content: center;
-    height: 50vh;
+    height: 46vh;
  
 `;
 
-const HeaderTitleBigText = styled.h1`
+const HeaderTitleBigTextStyled = styled.h1`
     text-transform: uppercase;
     font-size: 4.5rem;
     font-awesome: 700;
     color: #fff;
 `;
 
-const HeaderTitleMediumText = styled.h3`    
+const HeaderTitleMediumTextStyled = styled.h3`    
     font-size: 1.3rem;
     color: #fff;
     font-weight: 300;
@@ -27,12 +27,12 @@ const HeaderTitleMediumText = styled.h3`
 export default function HeaderTitle() {
     return (
         <HeaderTitleWrapper>
-            <HeaderTitleBigText>
+            <HeaderTitleBigTextStyled>
                 Modern & Spacious Room
-            </HeaderTitleBigText>
-            <HeaderTitleMediumText>
+            </HeaderTitleBigTextStyled>
+            <HeaderTitleMediumTextStyled>
                 Enjoy your holidays at Hotel Zante
-            </HeaderTitleMediumText>
+            </HeaderTitleMediumTextStyled>
         </HeaderTitleWrapper>
 
     )
