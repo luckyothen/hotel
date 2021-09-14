@@ -5,6 +5,7 @@
   "dependencies": {
     "@styled-icons/bootstrap": "^10.34.0",
     "@styled-icons/evaicons-solid": "^10.34.0",
+    "@styled-icons/icomoon": "^10.34.0",
     "@styled-icons/ionicons-outline": "^10.34.0",
     "@styled-icons/octicons": "^10.38.0",
     "@testing-library/jest-dom": "^5.14.1",

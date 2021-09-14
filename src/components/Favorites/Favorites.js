@@ -10,6 +10,7 @@ import Button from "../Controls/Button/Button";
 const FavoritesWrapper = styled.section`
   height: 100vh;
   padding: 5rem 0;
+  margin-bottom: 7rem;
 `;
 
 const RoomListButtonWrapper = styled.div`
