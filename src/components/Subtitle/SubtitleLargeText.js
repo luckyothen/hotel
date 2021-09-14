@@ -16,8 +16,6 @@ const SubtitleLargeTextStyled = styled.h2`
 const SquiglyImageStyled = styled.img`
   width: 100px;
   fill: red;
-  color: red;
-  background-color: red;
 `;
 
 export default function SubtitleLargeText({ children, color }) {

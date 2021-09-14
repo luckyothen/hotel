@@ -14,6 +14,7 @@ const ButtonStyled = styled.button`
   justify-content: center;
   transition: 0.2s ease-in-out all;
   font-size: ${({ fontSize }) => fontSize || "1rem"};
+  align-self: center;
 
   &:hover {
     cursor: pointer;

@@ -5,10 +5,17 @@ import Container from "../Controls/Container/Container";
 import SubtitleLargeText from "../Subtitle/SubtitleLargeText";
 import SubtitleSmallText from "../Subtitle/SubtitleSmallText";
 import RoomCardOverviewList from "../RoomCardOverview/RoomCardOverviewList";
+import Button from "../Controls/Button/Button";
 
 const FavoritesWrapper = styled.section`
   height: 100vh;
   padding: 5rem 0;
+`;
+
+const RoomListButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 5rem 0;
 `;
 
 export default function Favorites({ children }) {
@@ -25,6 +32,11 @@ export default function Favorites({ children }) {
           </SubtitleSmallText>
           <RoomCardOverviewList />
         </Subtitle>
+        <RoomListButtonWrapper>
+          <Button px=".6rem" py=".5rem" fontSize=".8rem" fontWeight="700">
+            View Room List
+          </Button>
+        </RoomListButtonWrapper>
       </Container>
     </FavoritesWrapper>
   );
