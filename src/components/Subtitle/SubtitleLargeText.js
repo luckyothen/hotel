@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import squiglyImages from "../../assets/images/wave.svg";
+import squiglyImages from "../../assets/images/wave_yellow.svg";
 
 const SubtitleLargeTextStyled = styled.h2`
   font-size: 2.3rem;

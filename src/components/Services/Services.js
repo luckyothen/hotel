@@ -1,16 +1,16 @@
-import React from 'react';
-import styled from 'styled-components';
-import Container from '../Controls/Container/Container';
+import React from "react";
+import styled from "styled-components";
+import Container from "../Controls/Container/Container";
 import Subtitle from "../Subtitle/Subtitle";
 import SubtitleLargeText from "../Subtitle/SubtitleLargeText";
 import SubtitleSmallText from "../Subtitle/SubtitleSmallText";
-import houseMaidImage from '../../assets/images/housemaid.jpg';
+import houseMaidImage from "../../assets/images/housemaid.jpg";
 import { SpoonKnife } from "@styled-icons/icomoon";
 
 const ServicesWrapperStyled = styled.section`
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   padding: 5rem 0;
-`
+`;
 
 const ServicesInformationWrapperStyled = styled.div`
   display: flex;
@@ -18,10 +18,30 @@ const ServicesInformationWrapperStyled = styled.div`
   justify-content: center;
   gap: 3rem;
   margin-top: 2rem;
-   
-   > *{
+
+  > * {
     width: 50%;
     height: 100%;
+  }
+`;
+
+const ServicesListItemTextStyled = styled.text`
+  color: #a1b1c1;
+`;
+
+const ServicesListItemTitleStyled = styled.text`
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.7rem;
+`;
+
+const ServicesIconStyled = styled.i`
+  color: #f8c11d;
+  text-align: center;
+  margin-right: 0.3rem;
+
+  &:before {
+    font-size: 2.5rem;
   }
 `;
 
@@ -29,32 +49,27 @@ const ServicesListItemStyled = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   background-color: #fff;
   padding: 1rem;
-  
-  > *:first-child{
+  transition: 0.2s all ease-in-out;
+
+  > *:first-child {
     width: 15%;
   }
 
-   > *:last-child{
+  > *:last-child {
     width: 85%;
   }
 
-`;
+  &:hover {
+    cursor: pointer;
+    background-color: #333333;
+  }
 
-const ServicesListItemTextStyled = styled.text`
-  color: #A1B1C1;
-`;
-
-const ServicesListItemTitleStyled = styled.text`
-   font-size: 1.4rem;
-   font-weight: 400;
-   margin-bottom: .7rem;
-`;
-
-const SpoonKnifeStyled = styled(SpoonKnife)`
-  color: #F8C11D;
+  &:hover > * {
+    color: #fff;
+  }
 `;
 
 export default function Services() {
@@ -76,25 +91,63 @@ export default function Services() {
           <ul>
             <ServicesListItemStyled>
               <div>
-                <SpoonKnifeStyled size="33" />
+                <ServicesIconStyled className="flaticon-food"></ServicesIconStyled>
               </div>
               <ServicesListItemTextStyled>
-                <ServicesListItemTitleStyled>Restaurant</ServicesListItemTitleStyled>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores illo in quas dolor deleniti earum, id perferendis excepturi dolorem a architecto accusantium illum velit maiores ab. Autem ab architecto minima corrupti, a neque nobis assumenda ipsam natus repellendus saepe repudiandae.</p>
+                <ServicesListItemTitleStyled>
+                  Restaurant
+                </ServicesListItemTitleStyled>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam nonummy nibh euismod tincidunt ut laoreet.
+                </p>
               </ServicesListItemTextStyled>
             </ServicesListItemStyled>
             <ServicesListItemStyled>
               <div>
-                <h3>Test</h3>
+                <ServicesIconStyled className="flaticon-person"></ServicesIconStyled>
               </div>
+              <ServicesListItemTextStyled>
+                <ServicesListItemTitleStyled>
+                  Spa - Beauty & Health
+                </ServicesListItemTitleStyled>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam nonummy nibh euismod tincidunt ut laoreet.
+                </p>
+              </ServicesListItemTextStyled>
+            </ServicesListItemStyled>
+            <ServicesListItemStyled>
               <div>
-                <h3>Testing bitches</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores illo in quas dolor deleniti earum, id perferendis excepturi dolorem a architecto accusantium illum velit maiores ab. Autem ab architecto minima corrupti, a neque nobis assumenda ipsam natus repellendus saepe repudiandae.</p>
+                <ServicesIconStyled className="flaticon-business"></ServicesIconStyled>
               </div>
+              <ServicesListItemTextStyled>
+                <ServicesListItemTitleStyled>
+                  Conference Room
+                </ServicesListItemTitleStyled>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam nonummy nibh euismod tincidunt ut laoreet.
+                </p>
+              </ServicesListItemTextStyled>
+            </ServicesListItemStyled>
+            <ServicesListItemStyled>
+              <div>
+                <ServicesIconStyled className="flaticon-beach"></ServicesIconStyled>
+              </div>
+              <ServicesListItemTextStyled>
+                <ServicesListItemTitleStyled>
+                  CSwimming Pool
+                </ServicesListItemTitleStyled>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam nonummy nibh euismod tincidunt ut laoreet.
+                </p>
+              </ServicesListItemTextStyled>
             </ServicesListItemStyled>
           </ul>
         </ServicesInformationWrapperStyled>
       </Container>
     </ServicesWrapperStyled>
-  )
+  );
 }
