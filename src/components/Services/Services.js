@@ -5,7 +5,7 @@ import Subtitle from "../Subtitle/Subtitle";
 import SubtitleLargeText from "../Subtitle/SubtitleLargeText";
 import SubtitleSmallText from "../Subtitle/SubtitleSmallText";
 import houseMaidImage from "../../assets/images/housemaid.jpg";
-import { SpoonKnife } from "@styled-icons/icomoon";
+
 
 const ServicesWrapperStyled = styled.section`
   background-color: #f5f5f5;
@@ -45,6 +45,22 @@ const ServicesIconStyled = styled.i`
   }
 `;
 
+
+
+const PointedDivStyled = styled.div`
+  position:absolute;
+  left: -3px;
+  top: 45%;
+  background-color: yellow ;
+  height: 10px;
+  width: 10px;
+  max-width: 10px;  
+  transform: rotate(45deg);
+  background-color: #333333;
+  display: none;
+  transition: 5s all ease-in-out;
+`;
+
 const ServicesListItemStyled = styled.li`
   display: flex;
   justify-content: center;
@@ -53,6 +69,8 @@ const ServicesListItemStyled = styled.li`
   background-color: #fff;
   padding: 1rem;
   transition: 0.2s all ease-in-out;
+  position: relative;
+ 
 
   > *:first-child {
     width: 15%;
@@ -70,6 +88,16 @@ const ServicesListItemStyled = styled.li`
   &:hover > * {
     color: #fff;
   }
+
+   &:hover ${PointedDivStyled} {
+    display: block;
+  }
+
+  
+`;
+
+const ImageServicesStyled = styled.img`
+ 
 `;
 
 export default function Services() {
@@ -87,10 +115,11 @@ export default function Services() {
         </Subtitle>
 
         <ServicesInformationWrapperStyled>
-          <img src={houseMaidImage} alt="House Maid" />
+          <ImageServicesStyled src={houseMaidImage} alt="House Maid" />
           <ul>
             <ServicesListItemStyled>
               <div>
+                <PointedDivStyled />
                 <ServicesIconStyled className="flaticon-food"></ServicesIconStyled>
               </div>
               <ServicesListItemTextStyled>
@@ -105,6 +134,7 @@ export default function Services() {
             </ServicesListItemStyled>
             <ServicesListItemStyled>
               <div>
+                <PointedDivStyled />
                 <ServicesIconStyled className="flaticon-person"></ServicesIconStyled>
               </div>
               <ServicesListItemTextStyled>
@@ -119,6 +149,7 @@ export default function Services() {
             </ServicesListItemStyled>
             <ServicesListItemStyled>
               <div>
+                <PointedDivStyled />
                 <ServicesIconStyled className="flaticon-business"></ServicesIconStyled>
               </div>
               <ServicesListItemTextStyled>
@@ -133,6 +164,7 @@ export default function Services() {
             </ServicesListItemStyled>
             <ServicesListItemStyled>
               <div>
+                <PointedDivStyled />
                 <ServicesIconStyled className="flaticon-beach"></ServicesIconStyled>
               </div>
               <ServicesListItemTextStyled>
