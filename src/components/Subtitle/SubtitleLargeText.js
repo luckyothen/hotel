@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import squiglyImages from "../../assets/images/wave_yellow.svg";
+import squiglyImagesDefault from "../../assets/images/wave_yellow.svg";
 
 const SubtitleLargeTextStyled = styled.h2`
   font-size: 2.3rem;
@@ -8,9 +8,6 @@ const SubtitleLargeTextStyled = styled.h2`
   text-align: center;
   color: ${({ color }) => color || "#F8C11D"};
   text-transform: uppercase;
-  &::after {
-    background: url(${squiglyImages}) bottom;
-  }
 `;
 
 const SquiglyImageStyled = styled.img`
@@ -18,13 +15,17 @@ const SquiglyImageStyled = styled.img`
   fill: red;
 `;
 
-export default function SubtitleLargeText({ children, color }) {
+export default function SubtitleLargeText({ children, color, squiiglyImage }) {
   return (
     <>
       <SubtitleLargeTextStyled color={color}>
         {children}
       </SubtitleLargeTextStyled>
-      <SquiglyImageStyled src={squiglyImages} alt="" srcset={squiglyImages} />
+      <SquiglyImageStyled
+        src={({ squiiglyImage }) => squiiglyImage || squiglyImagesDefault}
+        alt=""
+        srcset={({ squiiglyImage }) => squiiglyImage || squiglyImagesDefault}
+      />
     </>
   );
 }

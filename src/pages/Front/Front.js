@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "../../components/Header/Header";
-import Favorites from '../../components/Favorites/Favorites';
-import Services from '../../components/Services/Services';
-
+import Favorites from "../../components/Favorites/Favorites";
+import Services from "../../components/Services/Services";
+import About from "../../components/About/About";
 
 export default function Front() {
   return (
@@ -10,6 +10,7 @@ export default function Front() {
       <Header />
       <Favorites />
       <Services />
+      <About />
     </>
   );
 }

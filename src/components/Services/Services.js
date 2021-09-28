@@ -137,7 +137,7 @@ export default function Services() {
               </div>
               <ServicesListItemTextStyled>
                 <ServicesListItemTitleStyled>
-                  CSwimming Pool
+                  Swimming Pool
                 </ServicesListItemTitleStyled>
                 <p>
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
