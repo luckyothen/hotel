@@ -11,21 +11,20 @@ const SubtitleLargeTextStyled = styled.h2`
 `;
 
 const SquiglyImageStyled = styled.img`
-  width: 100px;
+  width: 60px;
   fill: red;
+  opacity: 0.7;
 `;
 
-export default function SubtitleLargeText({ children, color, squiiglyImage }) {
+export default function SubtitleLargeText({ children, color, squiglyImage }) {
+  let squigImg = squiglyImage || squiglyImagesDefault;
+
   return (
     <>
       <SubtitleLargeTextStyled color={color}>
         {children}
       </SubtitleLargeTextStyled>
-      <SquiglyImageStyled
-        src={({ squiiglyImage }) => squiiglyImage || squiglyImagesDefault}
-        alt=""
-        srcset={({ squiiglyImage }) => squiiglyImage || squiglyImagesDefault}
-      />
+      <SquiglyImageStyled srcSet={squigImg} alt="Waves" />
     </>
   );
 }

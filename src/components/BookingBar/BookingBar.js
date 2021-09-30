@@ -22,6 +22,9 @@ const InputStyled = styled.input`
   text-transform: uppercase;
   margin-right: 1rem;
   cursor: pointer;
+  &::placeholder {
+    color: #939393;
+  }
 `;
 
 const SelectStyled = styled.select`
@@ -33,6 +36,10 @@ const SelectStyled = styled.select`
   text-transform: uppercase;
   margin-right: 1rem;
   cursor: pointer;
+
+  &::placeholder {
+    color: #939393;
+  }
 `;
 
 export default function BookingBar() {
