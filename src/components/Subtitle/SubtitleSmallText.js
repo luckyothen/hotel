@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 const SubtitleSmallTextStyled = styled.p`
   font-size: 1rem;
-  color: #9db1c1;
+  color: ${({ textColor }) => textColor || "#9db1c1"};
   text-align: ${({ alignment }) => alignment || "center"};
-  margin: 2rem 0;
+  margin: 2rem 0 1.5rem 0;
 `;
 
-export default function SubtitleSmallText({ children, alignment }) {
+export default function SubtitleSmallText({ children, alignment, textColor }) {
   return (
-    <SubtitleSmallTextStyled alignment={alignment}>
+    <SubtitleSmallTextStyled alignment={alignment} textColor={textColor}>
       {children}
     </SubtitleSmallTextStyled>
   );

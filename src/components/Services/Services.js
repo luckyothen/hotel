@@ -103,7 +103,7 @@ export default function Services() {
     <ServicesWrapperStyled>
       <Container>
         <Subtitle>
-          <SubtitleLargeText alignLargeText="left">OUR AWESOME SERVICES</SubtitleLargeText>
+          <SubtitleLargeText>OUR AWESOME SERVICES</SubtitleLargeText>
           <SubtitleSmallText>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
