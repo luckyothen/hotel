@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import Favorites from "../../components/Favorites/Favorites";
 import Services from "../../components/Services/Services";
 import About from "../../components/About/About";
+import News from "../../components/News/News";
 
 export default function Front() {
   return (
@@ -11,6 +12,7 @@ export default function Front() {
       <Favorites />
       <Services />
       <About />
+      <News />
     </>
   );
 }

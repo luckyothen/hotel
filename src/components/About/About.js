@@ -36,8 +36,6 @@ const LobbyImageStyled = styled.img`
   border-radius: 50%;
   border: .5rem solid #39CDFF;
 box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-
-
 `;
 
 const BedImageStyled = styled(LobbyImageStyled)`
