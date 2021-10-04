@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const ButtonStyled = styled.button`
   padding: ${({ py }) => py || "0.7rem"} ${({ px }) => px || "1.7rem"};
@@ -6,20 +6,26 @@ const ButtonStyled = styled.button`
   background-color: ${({ bgColor }) => bgColor || "#F8C11D"};
   outline: none;
   border: none;
+  border-radius: 1px;
   font-weight: ${({ fontWeight }) => fontWeight || 700};
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
+  display: ${({ displayButton }) => displayButton || "inline-block"};
+  /* align-items: center; */
   text-align: center;
-  justify-content: center;
+  /* justify-content: center; */
   transition: 0.2s ease-in-out all;
   font-size: ${({ fontSize }) => fontSize || "1rem"};
-  align-self: center;
+  /* align-self: center; */
+  width: ${({ width }) => width || ""};
 
-  &:hover {
-    cursor: pointer;
-    opacity: 0.8;
-  }
+  ${({ hover }) =>
+    hover &&
+    css`
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    `}
 `;
 
 export default function Button({
@@ -30,7 +36,12 @@ export default function Button({
   px,
   fontWeight,
   fontSize,
+  width,
+  hover,
+  type,
 }) {
+  const btnType = type || "submit";
+
   return (
     <ButtonStyled
       bgColor={bgColor}
@@ -39,6 +50,9 @@ export default function Button({
       px={px}
       fontWeight={fontWeight}
       fontSize={fontSize}
+      width={width}
+      hover={hover}
+      type={btnType}
     >
       {children}
     </ButtonStyled>

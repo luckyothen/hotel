@@ -4,6 +4,7 @@ import Favorites from "../../components/Favorites/Favorites";
 import Services from "../../components/Services/Services";
 import About from "../../components/About/About";
 import News from "../../components/News/News";
+import Contact from "../../components/Contact/Contact";
 
 export default function Front() {
   return (
@@ -13,6 +14,7 @@ export default function Front() {
       <Services />
       <About />
       <News />
+      <Contact />
     </>
   );
 }

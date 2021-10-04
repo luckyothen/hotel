@@ -73,6 +73,7 @@ export default function NewsArticle({ title, user, date, image, text }) {
           fontSize=".7rem"
           fontWeight="700"
           bgColor="#1DC1F8"
+          hover="hover"
         >
           Read More
         </Button>

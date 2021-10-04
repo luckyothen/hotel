@@ -74,7 +74,7 @@ export default function BookingBar() {
         <option value="4">4</option>
         <option value="5">5</option>
       </SelectStyled>
-      <Button bgColor="#1DC1F8" py="1rem" px="1rem">
+      <Button bgColor="#1DC1F8" py="1rem" px="1rem" hover="hover">
         Book A Room
       </Button>
     </BookingBarStyled>

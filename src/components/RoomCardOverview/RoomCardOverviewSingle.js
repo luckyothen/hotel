@@ -95,6 +95,7 @@ export default function RoomCardOverviewSingle({ children, image }) {
           py=".5rem"
           fontSize=".8rem"
           fontWeight="700"
+          hover="hover"
         >
           View Details
         </Button>

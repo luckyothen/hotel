@@ -94,7 +94,7 @@ export default function Nav() {
             Contact Us <ArrowDownIcon size="16" />
           </ListGroupItem>
           <ListGroupItem>
-            <Button>
+            <Button hover="hover">
               <CalendarIcon size="14" />
               Book Online
             </Button>

@@ -34,7 +34,13 @@ export default function Favorites({ children }) {
           <RoomCardOverviewList />
         </Subtitle>
         <RoomListButtonWrapper>
-          <Button px=".6rem" py=".5rem" fontSize=".8rem" fontWeight="700">
+          <Button
+            px=".6rem"
+            py=".5rem"
+            fontSize=".8rem"
+            fontWeight="700"
+            hover="hover"
+          >
             View Room List
           </Button>
         </RoomListButtonWrapper>
