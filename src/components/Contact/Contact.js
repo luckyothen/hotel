@@ -9,6 +9,7 @@ import { Location } from "@styled-icons/icomoon/Location";
 import { Telephone } from "@styled-icons/bootstrap/Telephone";
 import { Envelope } from "@styled-icons/bootstrap/Envelope";
 import GoogleMapReact from "google-map-react";
+import { LocationArrow } from "@styled-icons/typicons/LocationArrow";
 
 const ContactSectionStyled = styled.section`
   padding: 5rem 2rem;
@@ -145,8 +146,8 @@ export default function Contact() {
             <InputStyled type="text" placeholder="Your Name" />
             <InputStyled type="email" placeholder="Your Email" />
             <TextAreaStyled placeholder="Your Message"></TextAreaStyled>
-            <Button bgColor="#00C3F9" py="1rem" width="100%" hover="hover">
-              Send Message
+            <Button bgColor="#1DC1F8" py="1rem" width="100%" hover="hover">
+              <LocationArrow size="23" />Send Message
             </Button>
           </FormStyled>
         </ContactWrapperStyled>

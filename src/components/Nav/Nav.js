@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Button from "../Controls/Button/Button";
-// import IconButton from "../Controls/IconButton/IconButton";
+import Branding from '../Branding/Branding';
 import { Calendar } from "@styled-icons/ionicons-outline/Calendar";
 import { StarFill } from "@styled-icons/bootstrap/StarFill";
 import { ArrowIosDownward } from "@styled-icons/evaicons-solid/ArrowIosDownward";
@@ -33,11 +33,11 @@ const ListGroupItem = styled.li`
   }
 `;
 
-const Branding = styled.h1`
-  font-size: 2.3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-`;
+// const Branding = styled.h1`
+//   font-size: 2.3rem;
+//   font-weight: 700;
+//   text-transform: uppercase;
+// `;
 
 const CalendarIcon = styled(Calendar)`
   color: white;
@@ -75,13 +75,6 @@ export default function Nav() {
       <NavWrapper>
         <BrandingWrapper>
           <Branding>Zogo Hotel</Branding>
-          <StarsWrapper>
-            <StarIcon size="7" />
-            <StarIcon size="7" />
-            <StarIcon size="7" />
-            <StarIcon size="7" />
-            <StarIcon size="7" />
-          </StarsWrapper>
         </BrandingWrapper>
         <ListGroup>
           <ListGroupItem>
