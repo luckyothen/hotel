@@ -10,15 +10,14 @@ const BrandingStyled = styled.h1`
 `;
 
 const StarsWrapper = styled.div`
-  display: flex;
+  display: inline-block;
   position: absolute;
-  top: 42px;
+  top: 28px;
   right: 0;
 `;
 
 const StarIcon = styled(StarFill)`
   color: #ffb300;
-
   &:not(:last-of-type) {
     margin-right: 0.1rem;
   }
@@ -26,11 +25,16 @@ const StarIcon = styled(StarFill)`
 
 const BrandingWrapper = styled.div`
   position: relative;
-`;
+  display: inline-block;
 
-export default function Branding({ children, fontSize, fontWeight, color }) {
+  ${({ marginBottom }) => marginBottom && css`
+  	margin-bottom: ${marginBottom};	 
+  `}`;
+
+
+export default function Branding({ children, fontSize, fontWeight, color, marginBottom }) {
 	return (
-		<BrandingWrapper>
+		<BrandingWrapper marginBottom={marginBottom}>
 			<BrandingStyled fontSize={fontSize} fontWeight={fontWeight} color={color}>
 				{children}
 			</BrandingStyled>

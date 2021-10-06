@@ -58,24 +58,14 @@ const StarIcon = styled(StarFill)`
   }
 `;
 
-const BrandingWrapper = styled.div`
-  position: relative;
-`;
-
-const StarsWrapper = styled.div`
-  display: flex;
-  position: absolute;
-  top: 42px;
-  right: 0;
-`;
 
 export default function Nav() {
   return (
     <>
       <NavWrapper>
-        <BrandingWrapper>
-          <Branding>Zogo Hotel</Branding>
-        </BrandingWrapper>
+
+        <Branding>Zogo Hotel</Branding>
+
         <ListGroup>
           <ListGroupItem>
             Home <ArrowDownIcon size="16" />

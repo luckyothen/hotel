@@ -79,6 +79,12 @@ const BadgesText = styled.p`
   display: inline-block;
 `;
 
+const ButtonWrapperText = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content:center;
+`;
+
 const defaultLocation = {
   center: {
     lat: 59.95,
@@ -86,6 +92,8 @@ const defaultLocation = {
   },
   zoom: 11,
 };
+
+
 
 export default function Contact() {
   return (
@@ -147,7 +155,9 @@ export default function Contact() {
             <InputStyled type="email" placeholder="Your Email" />
             <TextAreaStyled placeholder="Your Message"></TextAreaStyled>
             <Button bgColor="#1DC1F8" py="1rem" width="100%" hover="hover">
-              <LocationArrow size="23" />Send Message
+              <ButtonWrapperText>
+                <LocationArrow size="23" /> <p>Send Message</p>
+              </ButtonWrapperText>
             </Button>
           </FormStyled>
         </ContactWrapperStyled>
