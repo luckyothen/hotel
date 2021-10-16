@@ -4,6 +4,7 @@ import Branding from '../Branding/Branding';
 import { Calendar } from "@styled-icons/ionicons-outline/Calendar";
 import { StarFill } from "@styled-icons/bootstrap/StarFill";
 import { ArrowIosDownward } from "@styled-icons/evaicons-solid/ArrowIosDownward";
+import { device } from '../../themes/MediaDefaults';
 
 const NavWrapper = styled.nav`
   display: flex;
@@ -11,10 +12,19 @@ const NavWrapper = styled.nav`
   align-items: center;
   color: #fff;
   padding: 4rem 0;
+
+   @media only screen and ${device.sm}{
+           padding: 1rem 0;
+        }
+ 
+
 `;
 
 const ListGroup = styled.nav`
   list-style: none;
+    @media only screen and ${device.sm}{
+         display: none;
+        }
 `;
 
 const ListGroupItem = styled.li`
@@ -62,7 +72,7 @@ const StarIcon = styled(StarFill)`
 export default function Nav() {
   return (
     <>
-      <NavWrapper>
+      <NavWrapper device={device}>
 
         <Branding>Zogo Hotel</Branding>
 

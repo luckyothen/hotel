@@ -6,6 +6,7 @@ const SubtitleLargeTextStyled = styled.h2`
   display: inline-block;
   font-size: 2.3rem;
   font-weight: 600;
+  text-align: center;
  
   color: ${({ textColor }) => textColor || "#F8C11D"};
   text-transform: uppercase;

@@ -5,11 +5,11 @@ import Subtitle from "../Subtitle/Subtitle";
 import SubtitleLargeText from "../Subtitle/SubtitleLargeText";
 import SubtitleSmallText from "../Subtitle/SubtitleSmallText";
 import houseMaidImage from "../../assets/images/housemaid.jpg";
-
+import { device } from '../../themes/MediaDefaults';
 
 const ServicesWrapperStyled = styled.section`
   background-color: #f5f5f5;
-  padding: 5rem 0;
+  padding: 5rem 2rem;
 `;
 
 const ServicesInformationWrapperStyled = styled.div`
@@ -22,6 +22,16 @@ const ServicesInformationWrapperStyled = styled.div`
   > * {
     width: 50%;
     height: 100%;
+  }
+
+  @media only screen and ${device.sm}{
+    flex-direction: column;
+    display: block;
+  
+    > * {
+      width: 100%;
+    
+    }
   }
 `;
 
@@ -37,9 +47,8 @@ const ServicesListItemTitleStyled = styled.text`
 
 const ServicesIconStyled = styled.i`
   color: #f8c11d;
-  text-align: center;
-  margin-right: 0.3rem;
-
+  text-align: center !important;
+   
   &:before {
     font-size: 2.5rem;
   }
@@ -47,7 +56,7 @@ const ServicesIconStyled = styled.i`
 
 const PointedDivStyled = styled.div`
   position:absolute;
-  left: -3px;
+  left: -18px;
   top: 45%;
   background-color: yellow ;
   height: 10px;
@@ -55,8 +64,14 @@ const PointedDivStyled = styled.div`
   max-width: 10px;  
   transform: rotate(45deg);
   background-color: #333333;
-  display: none;
+    display: none;
   transition: 5s all ease-in-out;
+
+   @media only screen and ${device.lg}{
+      display: none;
+
+  }
+
 `;
 
 const ServicesListItemStyled = styled.li`
@@ -67,9 +82,8 @@ const ServicesListItemStyled = styled.li`
   background-color: #fff;
   padding: 1rem;
   transition: 0.2s all ease-in-out;
-  position: relative;
  
-
+  
   > *:first-child {
     width: 15%;
   }
@@ -91,11 +105,54 @@ const ServicesListItemStyled = styled.li`
     display: block;
   }
 
+   @media only screen and ${device.sm}{
+      display: block;
+        > * {
+      width: 100%;
+    }
+
+     > *:first-child {
+      width: 100%;
+    }
+
+     &:hover ${PointedDivStyled} {
+    display: none;
+  }
+ 
+  }
+
   
 `;
 
 const ImageServicesStyled = styled.img`
  
+`;
+
+const IconWrapper = styled.div`
+position: relative;
+display: flex; 
+justify-content: start;
+align-items: start;
+margin-right: 1rem;
+  
+     
+ @media only screen and ${device.lg}{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+`;
+
+const ServicesListGroup = styled.ul`
+  @media only screen and ${device.lg}{
+      margin-top: 2rem;
+    }
+  }
+
 `;
 
 export default function Services() {
@@ -114,12 +171,12 @@ export default function Services() {
 
         <ServicesInformationWrapperStyled>
           <ImageServicesStyled src={houseMaidImage} alt="House Maid" />
-          <ul>
+          <ServicesListGroup>
             <ServicesListItemStyled>
-              <div>
+              <IconWrapper>
                 <PointedDivStyled />
                 <ServicesIconStyled className="flaticon-food"></ServicesIconStyled>
-              </div>
+              </IconWrapper>
               <ServicesListItemTextStyled>
                 <ServicesListItemTitleStyled>
                   Restaurant
@@ -131,10 +188,10 @@ export default function Services() {
               </ServicesListItemTextStyled>
             </ServicesListItemStyled>
             <ServicesListItemStyled>
-              <div>
+              <IconWrapper>
                 <PointedDivStyled />
                 <ServicesIconStyled className="flaticon-person"></ServicesIconStyled>
-              </div>
+              </IconWrapper>
               <ServicesListItemTextStyled>
                 <ServicesListItemTitleStyled>
                   Spa - Beauty & Health
@@ -146,10 +203,10 @@ export default function Services() {
               </ServicesListItemTextStyled>
             </ServicesListItemStyled>
             <ServicesListItemStyled>
-              <div>
+              <IconWrapper>
                 <PointedDivStyled />
                 <ServicesIconStyled className="flaticon-business"></ServicesIconStyled>
-              </div>
+              </IconWrapper>
               <ServicesListItemTextStyled>
                 <ServicesListItemTitleStyled>
                   Conference Room
@@ -161,10 +218,10 @@ export default function Services() {
               </ServicesListItemTextStyled>
             </ServicesListItemStyled>
             <ServicesListItemStyled>
-              <div>
+              <IconWrapper>
                 <PointedDivStyled />
                 <ServicesIconStyled className="flaticon-beach"></ServicesIconStyled>
-              </div>
+              </IconWrapper>
               <ServicesListItemTextStyled>
                 <ServicesListItemTitleStyled>
                   Swimming Pool
@@ -175,7 +232,7 @@ export default function Services() {
                 </p>
               </ServicesListItemTextStyled>
             </ServicesListItemStyled>
-          </ul>
+          </ServicesListGroup>
         </ServicesInformationWrapperStyled>
       </Container>
     </ServicesWrapperStyled>

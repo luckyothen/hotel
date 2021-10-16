@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import RoomCardOverviewSingle from "./RoomCardOverviewSingle";
+import { device } from '../../themes/MediaDefaults';
 
 const RoomCardOverviewWrapper = styled.div`
   display: grid;
@@ -9,6 +10,12 @@ const RoomCardOverviewWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+
+   @media only screen and ${device.sm}{
+    grid-template-columns: 1fr;
+     width: 100%;
+ 
+  }
 `;
 
 const data = [

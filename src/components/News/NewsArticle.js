@@ -4,18 +4,32 @@ import Button from "../Controls/Button/Button";
 import { User } from "@styled-icons/boxicons-solid/User";
 import { Calendar } from "@styled-icons/ionicons-outline/Calendar";
 import { CommentDetail } from "@styled-icons/boxicons-regular/CommentDetail";
+import { device } from '../../themes/MediaDefaults';
 
 const NewsArticleWrapperStyled = styled.div`
   display: flex;
   border: 1px solid #edf9f9;
   background-color: #f6f7fb;
 
+    @media only screen and ${device.sm}{
+     margin-bottom: 2rem;
+   }
+
+    @media only screen and ${device.xs}{
+     flex-direction: column;
+     align-items: center;
+
+     & > *{
+       width: 100% !important;
+     }
+   }
+ 
   & > *:first-child {
-    width: 40%;
+    width: 35%;
   }
 
   & > *:last-of-type {
-    width: 60%;
+    width: 65%;
     padding: 0.5rem 1rem 1rem 1.7rem;
   }
 `;
@@ -34,12 +48,14 @@ const NewsArticleIconGroupStyled = styled.ul`
   display: flex;
   gap: 0.9rem;
   align-items: center;
+ 
+
 `;
 
 const NewsArticleIconLinkStyled = styled.li`
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.2rem;
 
   & > p {
     font-size: 0.8rem !important;
@@ -79,13 +95,13 @@ export default function NewsArticle({ title, user, date, image, text }) {
         </Button>
         <NewsArticleIconGroupStyled>
           <NewsArticleIconLinkStyled>
-            <User size="14" /> <p>{user}</p>
+            <User size="14" /><p>{user}</p>
           </NewsArticleIconLinkStyled>
           <NewsArticleIconLinkStyled>
-            <Calendar size="14" /> <p>{date}</p>
+            <Calendar size="14" /><p>{date}</p>
           </NewsArticleIconLinkStyled>
           <NewsArticleIconLinkStyled>
-            <CommentDetail size="14" /> <p>COMMENTS</p>
+            <CommentDetail size="14" /><p>COMMENTS</p>
           </NewsArticleIconLinkStyled>
         </NewsArticleIconGroupStyled>
       </div>

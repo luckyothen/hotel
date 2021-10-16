@@ -1,61 +1,83 @@
 import React from "react";
 import styled from "styled-components";
-import Container from "../Controls/Container/Container";
 import SubtitleLargeText from "../Subtitle/SubtitleLargeText";
 import SubtitleSmallText from "../Subtitle/SubtitleSmallText";
 import squiglyImage from "../../assets/images/wave_white.svg";
 import lobbyImage from "../../assets/images/lobby.jpg";
 import bedImage from "../../assets/images/bed1.jpg";
+import { device } from '../../themes/MediaDefaults';
 
 
 const AboutSectionStyled = styled.section`
   background-color: #00c3f9;
   padding: 5rem 2rem;
+  
 `;
 
 const AboutWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content:center;       
+  text-align: center;
+  margin-top: 2rem;
 
-  & > * {
-    width: 50%;
- 
+  @media only screen and ${device.sm}{              
+    display: block;    
   }
-
-   & > *:first-child {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-
   
 `;
 
 const LobbyImageStyled = styled.img`
-  height: 300px;
+  position: absolute; 
+  right:10%;
   width: 300px;
+  height: 300px;
   border-radius: 50%;
   border: .5rem solid #39CDFF;
-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  display:block;
+  top:2%;
+
+  @media only screen and ${device.xs}{
+
+     right:3%;
+      width: 200px;
+  height: 200px;
+  }
 `;
 
 const BedImageStyled = styled(LobbyImageStyled)`
-  margin-left: -70px;
-   outline: .5rem solid #1DC2F8;
-     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-
-   
+  right: 45%;      
+  outline: .5rem solid #1DC2F8;
+  display:block;
 `;
 
+const ImageWrapperStyled = styled.div`
+  position: relative !important;
+  height: 35vh;
+  margin-left: 4rem;
+
+   @media only screen and ${device.sm}{
+     margin-left: 2rem;
+     height: 50vh;
+  }
+
+   @media only screen and ${device.xs}{
+     margin-left: 2rem;
+     height: 35vh;
+  }
+   
+`;
 
 export default function About() {
   return (
     <AboutSectionStyled>
 
       <AboutWrapper>
-        <div>
+        <ImageWrapperStyled>
           <LobbyImageStyled srcSet={lobbyImage} />
           <BedImageStyled srcSet={bedImage} />
-        </div>
+        </ImageWrapperStyled>
         <div>
           <SubtitleLargeText squiglyImage={squiglyImage} textColor="#fff" alignLargeText="flex-start">
             ZAKYNTHOS - ZANTE
@@ -83,7 +105,6 @@ export default function About() {
           </SubtitleSmallText>
         </div>
       </AboutWrapper>
-
     </AboutSectionStyled>
   );
 }

@@ -4,6 +4,7 @@ import Container from "../Controls/Container/Container";
 import Nav from '../Nav/Nav';
 import HeaderTitle from "../HeaderTitle/HeaderTitle";
 import BookingBar from "../BookingBar/BookingBar";
+import { device } from '../../themes/MediaDefaults';
 
 
 
@@ -17,7 +18,15 @@ const HeaderStyled = styled.section`
     #855f9e
   );
 
-  height: 100vh;
+  height: 100%;
+
+    @media only screen and ${device.sm}{
+          height: 100%;
+        }
+
+   
+
+  
 `;
 
 export default function Header(props) {

@@ -7,9 +7,10 @@ import { CaretRightFill } from '@styled-icons/bootstrap/CaretRightFill';
 import { Location } from "@styled-icons/icomoon/Location";
 import { Envelope } from "@styled-icons/bootstrap/Envelope";
 import { Telephone } from "@styled-icons/bootstrap/Telephone";
+import { device } from '../../themes/MediaDefaults';
 
 const FooterStyled = styled.footer`
-padding: 5rem 0;
+padding: 5rem 2rem;
 background-color: #F9F9F9;
 `;
 
@@ -23,6 +24,12 @@ const FooterWrapperStyled = styled.div`
   & > *:not(:first-child){
     color:#929292;  
   }
+
+     @media only screen and ${device.sm}{
+    grid-template-columns: 1fr;
+      gap: 1rem;
+  }
+
 
 `;
 

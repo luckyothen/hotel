@@ -7,16 +7,16 @@ import SubtitleSmallText from "../Subtitle/SubtitleSmallText";
 import RoomCardOverviewList from "../RoomCardOverview/RoomCardOverviewList";
 import Button from "../Controls/Button/Button";
 
-const FavoritesWrapper = styled.section`
-  height: 100vh;
-  padding: 5rem 0;
-  margin-bottom: 7rem;
+
+const FavoritesWrapper = styled.section` 
+  padding: 5rem 2rem;
+  margin-bottom: 7rem; 
 `;
 
 const RoomListButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin: 3rem 0 5rem 0;
+  margin: 3rem 0 0 0;
 `;
 
 export default function Favorites({ children }) {

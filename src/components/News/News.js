@@ -7,7 +7,7 @@ import SubtitleSmallText from "../Subtitle/SubtitleSmallText";
 import NewsArticlesList from "./NewsArticlesList";
 
 const NewsWrapperStyled = styled.div`
-  padding: 5rem 0;
+  padding: 5rem 2rem;
 `;
 
 export default function News() {

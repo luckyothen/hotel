@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { device } from '../../../themes/MediaDefaults';
 
 const ButtonStyled = styled.button`
   padding: ${({ py }) => py || "0.7rem"} ${({ px }) => px || "1.7rem"};
@@ -26,6 +27,15 @@ const ButtonStyled = styled.button`
         opacity: 0.8;
       }
     `}
+
+     ${({ responsive }) =>
+    responsive &&
+    css`
+        @media only screen and ${device.sm}{
+          width: 100% !important;
+          display:block;
+        }
+    `}
 `;
 
 export default function Button({
@@ -39,6 +49,7 @@ export default function Button({
   width,
   hover,
   type,
+  responsive
 }) {
   const btnType = type || "submit";
 
@@ -53,6 +64,7 @@ export default function Button({
       width={width}
       hover={hover}
       type={btnType}
+      responsive={responsive}
     >
       {children}
     </ButtonStyled>

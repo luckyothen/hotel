@@ -10,6 +10,7 @@ import { Telephone } from "@styled-icons/bootstrap/Telephone";
 import { Envelope } from "@styled-icons/bootstrap/Envelope";
 import GoogleMapReact from "google-map-react";
 import { LocationArrow } from "@styled-icons/typicons/LocationArrow";
+import { device } from '../../themes/MediaDefaults';
 
 const ContactSectionStyled = styled.section`
   padding: 5rem 2rem;
@@ -20,6 +21,11 @@ const ContactWrapperStyled = styled.div`
   grid-template-columns: repeat(2, 1fr);
   margin-top: 2rem;
   gap: 2rem;
+
+    @media only screen and ${device.sm}{
+    grid-template-columns: 1fr;
+     width: 100%;
+  }
 `;
 
 const FormStyled = styled.form`
@@ -70,6 +76,11 @@ const BadgesStyled = styled.div`
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1rem;
+
+    @media only screen and ${device.sm}{
+    flex-direction: column;
+     width: 100%;
+  }
 `;
 
 const BadgesText = styled.p`
@@ -93,13 +104,25 @@ const defaultLocation = {
   zoom: 11,
 };
 
+const ContactButtonStyled = styled(Button)`
+    @media only screen and ${device.sm}{
+    background-color: red;
+     width: 100% !important;
+  }
+`;
+
+const SubtitleStyled = styled(Subtitle)`
+  text-align: center;
+  margin: auto;
+
+`
 
 
 export default function Contact() {
   return (
     <ContactSectionStyled>
       <Container>
-        <Subtitle>
+        <SubtitleStyled>
           <SubtitleLargeText>OUR AWESOME SERVICES</SubtitleLargeText>
           <SubtitleSmallText>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -107,7 +130,7 @@ export default function Contact() {
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
             ullamcorper suscipit.
           </SubtitleSmallText>
-        </Subtitle>
+        </SubtitleStyled>
         <ContactWrapperStyled>
           <div style={{ height: "100%", width: "100%" }}>
             <GoogleMapReact
@@ -120,36 +143,39 @@ export default function Contact() {
           </div>
           <FormStyled>
             <BadgesStyled>
-              <Button
+              <ContactButtonStyled
                 fontWeight="600"
                 fontSize=".8rem"
                 py=".5rem"
                 px="2rem"
                 type="button"
+                responsive="responsive"
               >
                 <Location size="14" />
                 <BadgesText>Navagio Zakynthos</BadgesText>
-              </Button>
-              <Button
+              </ContactButtonStyled>
+              <ContactButtonStyled
                 fontWeight="600"
                 fontSize=".8rem"
                 py=".5rem"
                 px="1rem"
                 type="button"
+                responsive="responsive"
               >
                 <Telephone size="14" />
                 <BadgesText>1-888-123-4567</BadgesText>
-              </Button>
-              <Button
+              </ContactButtonStyled>
+              <ContactButtonStyled
                 fontWeight="600"
                 fontSize=".8rem"
                 py=".5rem"
                 px="1rem"
                 type="button"
+                responsive="responsive"
               >
                 <Envelope size="14" />
                 <BadgesText>contact@site.com</BadgesText>
-              </Button>
+              </ContactButtonStyled>
             </BadgesStyled>
             <InputStyled type="text" placeholder="Your Name" />
             <InputStyled type="email" placeholder="Your Email" />

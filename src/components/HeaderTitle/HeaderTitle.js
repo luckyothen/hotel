@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { device } from '../../themes/MediaDefaults';
 
 const HeaderTitleWrapper = styled.div`
     display: flex;
@@ -7,6 +8,10 @@ const HeaderTitleWrapper = styled.div`
     align-items:center;
     justify-content: center;
     height: 46vh;
+
+     @media only screen and ${device.sm}{
+          display:none;
+        }
  
 `;
 
