@@ -4,26 +4,26 @@ import Button from "../Controls/Button/Button";
 import { User } from "@styled-icons/boxicons-solid/User";
 import { Calendar } from "@styled-icons/ionicons-outline/Calendar";
 import { CommentDetail } from "@styled-icons/boxicons-regular/CommentDetail";
-import { device } from '../../themes/MediaDefaults';
+import { device } from "../../themes/MediaDefaults";
 
 const NewsArticleWrapperStyled = styled.div`
   display: flex;
   border: 1px solid #edf9f9;
   background-color: #f6f7fb;
 
-    @media only screen and ${device.sm}{
-     margin-bottom: 2rem;
-   }
+  @media only screen and ${device.sm} {
+    margin-bottom: 2rem;
+  }
 
-    @media only screen and ${device.xs}{
-     flex-direction: column;
-     align-items: center;
+  @media only screen and ${device.xs} {
+    flex-direction: column;
+    align-items: center;
 
-     & > *{
-       width: 100% !important;
-     }
-   }
- 
+    & > * {
+      width: 100% !important;
+    }
+  }
+
   & > *:first-child {
     width: 35%;
   }
@@ -48,8 +48,6 @@ const NewsArticleIconGroupStyled = styled.ul`
   display: flex;
   gap: 0.9rem;
   align-items: center;
- 
-
 `;
 
 const NewsArticleIconLinkStyled = styled.li`
@@ -65,6 +63,11 @@ const NewsArticleIconLinkStyled = styled.li`
   &:hover {
     cursor: pointer;
     color: #8db4d3;
+  }
+
+  @media only screen and ${device.sm} {
+    flex-direction: column;
+    text-align: center;
   }
 `;
 
@@ -95,13 +98,16 @@ export default function NewsArticle({ title, user, date, image, text }) {
         </Button>
         <NewsArticleIconGroupStyled>
           <NewsArticleIconLinkStyled>
-            <User size="14" /><p>{user}</p>
+            <User size="14" />
+            <p>{user}</p>
           </NewsArticleIconLinkStyled>
           <NewsArticleIconLinkStyled>
-            <Calendar size="14" /><p>{date}</p>
+            <Calendar size="14" />
+            <p>{date}</p>
           </NewsArticleIconLinkStyled>
           <NewsArticleIconLinkStyled>
-            <CommentDetail size="14" /><p>COMMENTS</p>
+            <CommentDetail size="14" />
+            <p>COMMENTS</p>
           </NewsArticleIconLinkStyled>
         </NewsArticleIconGroupStyled>
       </div>
