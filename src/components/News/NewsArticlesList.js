@@ -62,7 +62,7 @@ const data = [
   },
 ];
 
-const newsArticles = data.map((dt) => {
+const newsArticles = data.map((dt, index) => {
   return (
     <NewsArticle
       image={dt.image}
@@ -70,6 +70,7 @@ const newsArticles = data.map((dt) => {
       text={dt.text}
       user={dt.user}
       date={dt.date}
+      key = {index}
     />
   );
 });

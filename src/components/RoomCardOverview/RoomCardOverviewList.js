@@ -24,9 +24,9 @@ const data = [
   { text: "Deluxe Bed", image: "assets/images/deluxe.jpg" },
 ];
 
-const overview = data.map((dt) => {
+const overview = data.map((dt, index) => {
   return (
-    <RoomCardOverviewSingle image={dt.image}>{dt.text}</RoomCardOverviewSingle>
+    <RoomCardOverviewSingle image={dt.image} key = {index}>{dt.text}</RoomCardOverviewSingle>
   );
 });
 

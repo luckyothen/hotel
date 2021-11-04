@@ -20,20 +20,19 @@ const HeaderStyled = styled.section`
 
   height: 100%;
 
-    @media only screen and ${device.sm}{
-          height: 100%;
-        }
-
-   
-
+  @media only screen and ${device.sm}{
+        height: 100%;
+      }
   
 `;
 
-export default function Header(props) {
+export default function Header({isInview, ref}) {
+  console.log(isInview)
   return (
-    <HeaderStyled>
-      <Container>
-        <Nav />
+  
+    <HeaderStyled ref = {ref}>
+      <Container>        
+        <Nav isInview = {isInview}/>
         <HeaderTitle />
         <BookingBar />
       </Container>

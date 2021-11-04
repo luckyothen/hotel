@@ -6,7 +6,7 @@ import { StarFill } from "@styled-icons/bootstrap/StarFill";
 import { ArrowIosDownward } from "@styled-icons/evaicons-solid/ArrowIosDownward";
 import { device } from '../../themes/MediaDefaults';
 
-const NavWrapper = styled.nav`
+let NavWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,11 +68,13 @@ const StarIcon = styled(StarFill)`
   }
 `;
 
+export default function Nav({isInview}) {
 
-export default function Nav() {
+ 
   return (
     <>
-      <NavWrapper device={device}>
+     
+       <NavWrapper device={device}>
 
         <Branding>Zogo Hotel</Branding>
 
@@ -93,7 +95,7 @@ export default function Nav() {
             </Button>
           </ListGroupItem>
         </ListGroup>
-      </NavWrapper>
+      </NavWrapper>)  
     </>
-  );
+  );  
 }

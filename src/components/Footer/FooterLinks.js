@@ -35,10 +35,10 @@ const FooterLinkGroupStyled = styled.ul`
 `;
 
 export default function FooterLinks({ title, links, linkColor, hover }) {
-	const linkData = links.map(link => (<FooterLinkStyled hover={hover}>{link}</FooterLinkStyled>))
+	const linkData = links.map((link, index) => (<FooterLinkStyled key = {index} hover={hover}>{link}</FooterLinkStyled>))
 
 	return (
-		<FooterLinksWrapperStyled>
+		<FooterLinksWrapperStyled >
 			<FooterLinkListTitleStyled>
 				{title}
 			</FooterLinkListTitleStyled>

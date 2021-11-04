@@ -93,22 +93,22 @@ const contactUsData = [
 
 
 
-const latestNewsDataComponents = latestNewsData.map(latestNews => (
-  <LatestNewsLinkWrapper>
+const latestNewsDataComponents = latestNewsData.map((latestNews, index) => (
+  <LatestNewsLinkWrapper key = {index}>
     <p>{latestNews.title}</p>
     <SmallTextStyled>{latestNews.date}</SmallTextStyled>
   </LatestNewsLinkWrapper>
 ));
 
-const aboutUsComponents = aboutUsData.map(aboutus => (
-  <AboutUsLinkWrapper >
+const aboutUsComponents = aboutUsData.map((aboutus, index)  => (
+  <AboutUsLinkWrapper key = {index}>
     <CaretRightFill size="13" />
     <p>{aboutus}</p>
   </AboutUsLinkWrapper>
 ));
 
-const contactUsWrapper = contactUsData.map(contactus => (
-  <AboutUsLinkWrapper>
+const contactUsWrapper = contactUsData.map((contactus, index) => (
+  <AboutUsLinkWrapper key = {index}>
     <span>{contactus.icon}</span>
     <p>{contactus.title}</p>
   </AboutUsLinkWrapper>
