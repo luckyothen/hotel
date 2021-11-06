@@ -26,16 +26,20 @@ const HeaderStyled = styled.section`
   
 `;
 
-export default function Header({isInview, ref}) {
-  console.log(isInview)
+function Header({ isInview, propRef }) {
+
   return (
-  
-    <HeaderStyled ref = {ref}>
-      <Container>        
-        <Nav isInview = {isInview}/>
+
+    <HeaderStyled ref={propRef}>
+      <Container>
+        <Nav isInview={isInview} />
         <HeaderTitle />
         <BookingBar />
       </Container>
     </HeaderStyled>
   );
 }
+
+const forwardedRefHeader = React.forwardRef(Header);
+
+export default forwardedRefHeader;

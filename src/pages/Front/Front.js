@@ -7,16 +7,16 @@ import About from "../../components/About/About";
 import News from "../../components/News/News";
 import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
- 
+
 export default function Front() {
-  
+
   const [ref, inView] = useInView({
-    threshold: 0,
+    threshold: .9,
   });
 
   return (
     <>
-      <Header isInview = {inView} ref = {ref}/>
+      <Header isInview={inView} propRef={ref} />
       <Favorites />
       <Services />
       <About />
