@@ -18,7 +18,7 @@ const HeaderTitleWrapper = styled.div`
 const HeaderTitleBigTextStyled = styled.h1`
     text-transform: uppercase;
     font-size: 4.5rem;
-    font-awesome: 700;
+    font-weight: 700;
     color: #fff;
 `;
 
@@ -36,7 +36,7 @@ export default function HeaderTitle() {
                 Modern & Spacious Room
             </HeaderTitleBigTextStyled>
             <HeaderTitleMediumTextStyled>
-                Enjoy your holidays at Hotel Zante
+                Enjoy your holidays at Hotel Zogo
             </HeaderTitleMediumTextStyled>
         </HeaderTitleWrapper>
 

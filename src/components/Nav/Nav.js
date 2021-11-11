@@ -17,6 +17,7 @@ let NavWrapper = styled.nav`
   color: #fff;
   padding: 4rem 0;
   transition: .6s all ease-in;
+  background-color: ${({backgroundColor}) => backgroundColor || "transparent" };
 
    @media only screen and ${device.sm}{
            padding: 1rem 0;
@@ -77,9 +78,12 @@ const ArrowDownIcon = styled(ArrowIosDownward)`
   margin-left: 0.4rem;
   font-weight: 800;
 `;
+ 
 
-let navContent = <>
-  <Branding>Zogo Hotel</Branding>
+export default function Nav({ isInview, backgroundColor, brandingTextColor }) {
+
+  let navContent = <>
+  <Branding color = {brandingTextColor}>Zogo Hotel</Branding>
   <ListGroup>
     <ListGroupItem>
       Home <ArrowDownIcon size="16" />
@@ -98,12 +102,9 @@ let navContent = <>
     </ListGroupItem>
   </ListGroup>
 </>
-
-
-export default function Nav({ isInview }) {
-
+ 
   let mainContent =
-    <NavWrapper device={device}>
+    <NavWrapper device={device} backgroundColor={backgroundColor}>
       {navContent}
     </NavWrapper>
 

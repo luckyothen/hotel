@@ -8,7 +8,7 @@ import News from "../../components/News/News";
 import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
 
-export default function Front() {
+export default function Home() {
 
   const [ref, inView] = useInView({
     threshold: .9,
