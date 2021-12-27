@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "../Controls/Container/Container";
-import Nav from '../Nav/Nav';
 import HeaderTitle from "../HeaderTitle/HeaderTitle";
 import BookingBar from "../BookingBar/BookingBar";
 import { device } from '../../themes/MediaDefaults';
@@ -9,6 +8,7 @@ import { device } from '../../themes/MediaDefaults';
 
 
 const HeaderStyled = styled.section`
+  padding-top:6%;
   background-image: linear-gradient(
     to right top,
     #9e5872,
@@ -32,7 +32,6 @@ function Header({ isInview, propRef }) {
 
     <HeaderStyled ref={propRef}>
       <Container>
-        <Nav isInview={isInview} />
         <HeaderTitle />
         <BookingBar />
       </Container>
