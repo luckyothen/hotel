@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Container from "../Controls/Container/Container";
+import Container from "../../Controls/Container/Container";
 import Subtitle from "../Subtitle/Subtitle";
 import SubtitleLargeText from "../Subtitle/SubtitleLargeText";
 import SubtitleSmallText from "../Subtitle/SubtitleSmallText";
-import houseMaidImage from "../../assets/images/housemaid.jpg";
-import { device } from '../../themes/MediaDefaults';
+import houseMaidImage from "../../../assets/images/housemaid.jpg";
+import { device } from '../../../themes/MediaDefaults';
 
 const ServicesWrapperStyled = styled.section`
   background-color: #f5f5f5;

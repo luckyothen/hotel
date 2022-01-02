@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import NewsArticle from "./NewsArticle";
-import { device } from '../../themes/MediaDefaults';
+import { device } from '../../../themes/MediaDefaults';
 
 const NewsArticlesWrapperStyled = styled.div`
   margin-top: 2rem;
@@ -70,7 +70,7 @@ const newsArticles = data.map((dt, index) => {
       text={dt.text}
       user={dt.user}
       date={dt.date}
-      key = {index}
+      key={index}
     />
   );
 });

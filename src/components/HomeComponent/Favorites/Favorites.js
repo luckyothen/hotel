@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Subtitle from "../Subtitle/Subtitle";
-import Container from "../Controls/Container/Container";
+import Container from "../../Controls/Container/Container";
 import SubtitleLargeText from "../Subtitle/SubtitleLargeText";
 import SubtitleSmallText from "../Subtitle/SubtitleSmallText";
-import RoomCardOverviewList from "../RoomCardOverview/RoomCardOverviewList";
-import Button from "../Controls/Button/Button";
+import RoomCardOverviewList from "../../RoomCardOverview/RoomCardOverviewList";
+import Button from "../../Controls/Button/Button";
 
 
 const FavoritesWrapper = styled.section` 

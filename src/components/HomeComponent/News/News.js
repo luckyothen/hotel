@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Container from "../Controls/Container/Container";
+import Container from "../../Controls/Container/Container";
 import Subtitle from "../Subtitle/Subtitle";
 import SubtitleLargeText from "../Subtitle/SubtitleLargeText";
 import SubtitleSmallText from "../Subtitle/SubtitleSmallText";

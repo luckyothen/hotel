@@ -1,9 +1,11 @@
+import RoomList from './pages/RoomList/RoomList';
 import Home from "./pages/Home/Home";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import Nav from "./components/Nav/Nav";
-import { useInView } from 'react-intersection-observer'
-// import { BrowserRoutes } from "react-router-dom";
+import Footer from "./components/Shared/Footer/Footer";
+import Header from "./components/HomeComponent/Header/Header";
+import Nav from "./components/Shared/Nav/Nav";
+import { useInView } from 'react-intersection-observer';
+import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
+
 
 function App() {
 
@@ -12,12 +14,15 @@ function App() {
   });
 
   return (
-    <>
+    <BrowserRouter>
       <Nav isInview={inView} />
       <Header propRef={ref} />
-      <Home />
+      <Routes>
+        <Route path="/rooms" element={<RoomList />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter >
   );
 }
 

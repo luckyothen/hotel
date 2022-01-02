@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../Controls/Button/Button";
-import { device } from '../../themes/MediaDefaults';
+import Button from "../../Controls/Button/Button";
+import { device } from '../../../themes/MediaDefaults';
 
 const BookingBarStyled = styled.div`
   background-color: #fff;
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
   display: flex;
-
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   > * {
     width: 100%;
   }

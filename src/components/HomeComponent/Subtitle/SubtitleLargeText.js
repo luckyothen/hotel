@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import squiglyImagesDefault from "../../assets/images/wave_yellow.svg";
+import squiglyImagesDefault from "../../../assets/images/wave_yellow.svg";
 
 const SubtitleLargeTextStyled = styled.h2`
   display: inline-block;

@@ -1,12 +1,14 @@
 import React from 'react'
-import Nav from "../../components/Nav/Nav";
+import ContactTopBar from '../../components/RoomListComponent/ContactTopBar/ContactTopBar';
+import Nav from '../../components/Shared/Nav/Nav';
 
 function RoomList() {
-    return (
-        <>
-          <Nav backgroundColor="#fff" brandingTextColor="#00BFF6"/>     
-        </>         
-    )
+  return (
+    <>
+      <ContactTopBar />
+      
+    </>
+  )
 }
 
 export default RoomList

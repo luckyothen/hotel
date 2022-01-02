@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import SubtitleLargeText from "../Subtitle/SubtitleLargeText";
 import SubtitleSmallText from "../Subtitle/SubtitleSmallText";
-import squiglyImage from "../../assets/images/wave_white.svg";
-import lobbyImage from "../../assets/images/lobby.jpg";
-import bedImage from "../../assets/images/bed1.jpg";
-import { device } from '../../themes/MediaDefaults';
+import squiglyImage from "../../../assets/images/wave_white.svg";
+import lobbyImage from "../../../assets/images/lobby.jpg";
+import bedImage from "../../../assets/images/bed1.jpg";
+import { device } from '../../../themes/MediaDefaults';
 
 
 const AboutSectionStyled = styled.section`

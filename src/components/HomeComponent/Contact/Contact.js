@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import Container from "../Controls/Container/Container";
+import Container from "../../Controls/Container/Container";
 import Subtitle from "../Subtitle/Subtitle";
 import SubtitleLargeText from "../Subtitle/SubtitleLargeText";
 import SubtitleSmallText from "../Subtitle/SubtitleSmallText";
-import Button from "../Controls/Button/Button";
+import Button from "../../Controls/Button/Button";
 import { Location } from "@styled-icons/icomoon/Location";
 import { Telephone } from "@styled-icons/bootstrap/Telephone";
 import { Envelope } from "@styled-icons/bootstrap/Envelope";
 import GoogleMapReact from "google-map-react";
 import { LocationArrow } from "@styled-icons/typicons/LocationArrow";
-import { device } from '../../themes/MediaDefaults';
+import { device } from '../../../themes/MediaDefaults';
 
 const ContactSectionStyled = styled.section`
   padding: 5rem 2rem;
@@ -123,7 +123,7 @@ export default function Contact() {
     <ContactSectionStyled>
       <Container>
         <SubtitleStyled>
-          <SubtitleLargeText>OUR AWESOME SERVICES</SubtitleLargeText>
+          <SubtitleLargeText>CONTACT US</SubtitleLargeText>
           <SubtitleSmallText>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat

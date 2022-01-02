@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../Controls/Button/Button";
+import Button from "../../Controls/Button/Button";
 import { User } from "@styled-icons/boxicons-solid/User";
 import { Calendar } from "@styled-icons/ionicons-outline/Calendar";
 import { CommentDetail } from "@styled-icons/boxicons-regular/CommentDetail";
-import { device } from "../../themes/MediaDefaults";
+import { device } from "../../../themes/MediaDefaults";
 
 const NewsArticleWrapperStyled = styled.div`
   display: flex;

@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import Container from '../Controls/Container/Container';
+import Container from '../../Controls/Container/Container';
 import Branding from '../Branding/Branding';
 import FooterLinks from './FooterLinks';
 import { CaretRightFill } from '@styled-icons/bootstrap/CaretRightFill';
 import { Location } from "@styled-icons/icomoon/Location";
 import { Envelope } from "@styled-icons/bootstrap/Envelope";
 import { Telephone } from "@styled-icons/bootstrap/Telephone";
-import { device } from '../../themes/MediaDefaults';
+import { device } from '../../../themes/MediaDefaults';
 
 const FooterStyled = styled.footer`
 padding: 5rem 2rem;
@@ -94,21 +94,21 @@ const contactUsData = [
 
 
 const latestNewsDataComponents = latestNewsData.map((latestNews, index) => (
-  <LatestNewsLinkWrapper key = {index}>
+  <LatestNewsLinkWrapper key={index}>
     <p>{latestNews.title}</p>
     <SmallTextStyled>{latestNews.date}</SmallTextStyled>
   </LatestNewsLinkWrapper>
 ));
 
-const aboutUsComponents = aboutUsData.map((aboutus, index)  => (
-  <AboutUsLinkWrapper key = {index}>
+const aboutUsComponents = aboutUsData.map((aboutus, index) => (
+  <AboutUsLinkWrapper key={index}>
     <CaretRightFill size="13" />
     <p>{aboutus}</p>
   </AboutUsLinkWrapper>
 ));
 
 const contactUsWrapper = contactUsData.map((contactus, index) => (
-  <AboutUsLinkWrapper key = {index}>
+  <AboutUsLinkWrapper key={index}>
     <span>{contactus.icon}</span>
     <p>{contactus.title}</p>
   </AboutUsLinkWrapper>

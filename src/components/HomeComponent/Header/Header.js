@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Container from "../Controls/Container/Container";
+import Container from "../../Controls/Container/Container";
 import HeaderTitle from "../HeaderTitle/HeaderTitle";
 import BookingBar from "../BookingBar/BookingBar";
-import { device } from '../../themes/MediaDefaults';
+import { device } from '../../../themes/MediaDefaults';
 
 
 
@@ -22,6 +22,9 @@ const HeaderStyled = styled.section`
 
   @media only screen and ${device.sm}{
         height: 100%;
+        padding-top:16%;
+    
+          
       }
   
 `;

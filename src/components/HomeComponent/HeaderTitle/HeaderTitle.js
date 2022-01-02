@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { device } from '../../themes/MediaDefaults';
+import { device } from '../../../themes/MediaDefaults';
 
 const HeaderTitleWrapper = styled.div`
     display: flex;
