@@ -12,24 +12,14 @@ const navAnimationOpacity = keyframes`
  0% { top: -100px; opacity: .5}   
  100% { top: 0; opacity: 1 }
 `
-
-let NavWrapper = styled.nav`
-  display: flex;
+let NavWrapperSticky = styled.nav`
+ display: flex;
   justify-content: space-between;
- 
-  color: #fff;
-  padding: 4rem 0;
+  align-items: center;
+  color: #fff; 
   transition: .6s all ease-in;
-  background-color: ${({ backgroundColor }) => backgroundColor || "transparent"};
-  z-index: 9999;
- 
-   @media only screen and ${device.sm}{
-           padding: 1rem 0;           
-        }  
-`;
-
-let NavWrapperSticky = styled(NavWrapper)`
-  position: fixed;
+  background-color: ${({ navBackgroundColor }) => navBackgroundColor || "transparent"};  
+  position:  ${({ position }) => position || "fixed"};;
   top: 0;
   left: 0;
   width: 100%;
@@ -86,7 +76,7 @@ const CalendarIcon = styled(Calendar)`
 `;
 
 const ArrowDownIcon = styled(ArrowIosDownward)`
-  color: white;
+  color:${({ arrowDownIconColor }) => arrowDownIconColor || "#fff"};  ;
   margin-left: 0.4rem;
   font-weight: 800;
 `;
@@ -139,7 +129,7 @@ let BurgerContainer = styled.div`
         }
 `;
 
-export default function Nav({ isInview, brandingTextColor }) {
+export default function Nav({ isInview, navBackgroundColor, brandingTextColor, linkColor, arrowDownIconColor, position }) {
 
   const [isUserClickedMenu, setIsUserClickedMenu] = useState(false);
   useEffect(() => {
@@ -153,7 +143,7 @@ export default function Nav({ isInview, brandingTextColor }) {
   }
 
   const StyledLink = styled(Link)`
-    color: #fff !important;
+    color:  ${({ linkColor }) => linkColor || "#fff"} !important;
     text-decoration: none;
      &:not(:last-of-type) {
       margin-right: 4rem;
@@ -166,22 +156,22 @@ export default function Nav({ isInview, brandingTextColor }) {
   `;
 
   return (
-    <NavWrapperSticky device={device} backgroundImage={isInview}>
+    <NavWrapperSticky device={device} backgroundImage={isInview} position={position} navBackgroundColor={navBackgroundColor}>
       <Branding color={brandingTextColor}>Zogo Hotel</Branding>
       <ListGroup>
         <ListGroupItem>
-          <StyledLink to="/" >
-            Home <ArrowDownIcon size="16" />
+          <StyledLink to="/" linkColor={linkColor} >
+            Home <ArrowDownIcon size="16" arrowDownIconColor={arrowDownIconColor} />
           </StyledLink>
         </ListGroupItem>
         <ListGroupItem>
-          <StyledLink to="/rooms" >
-            Rooms <ArrowDownIcon size="16" />
+          <StyledLink to="/rooms" linkColor={linkColor} >
+            Rooms <ArrowDownIcon size="16" arrowDownIconColor={arrowDownIconColor} />
           </StyledLink>
         </ListGroupItem>
         <ListGroupItem>
-          <StyledLink to="/rooms" >
-            Contact Us <ArrowDownIcon size="16" />
+          <StyledLink to="/rooms" linkColor={linkColor} >
+            Contact Us <ArrowDownIcon size="16" arrowDownIconColor={arrowDownIconColor} />
           </StyledLink>
         </ListGroupItem>
         <ListGroupItem>

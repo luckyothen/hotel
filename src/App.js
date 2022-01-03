@@ -9,14 +9,10 @@ import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
 
 function App() {
 
-  const [ref, inView] = useInView({
-    threshold: .9,
-  });
 
   return (
     <BrowserRouter>
-      <Nav isInview={inView} />
-      <Header propRef={ref} />
+
       <Routes>
         <Route path="/rooms" element={<RoomList />} />
         <Route path="/" element={<Home />} />
