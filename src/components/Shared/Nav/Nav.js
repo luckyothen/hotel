@@ -25,7 +25,7 @@ let NavWrapperSticky = styled.nav`
   width: 100%;
   transition: .6s all ease-in;
   z-index: 99999;
-  padding: 1rem 6rem;
+  padding: 1rem 7rem;
   animation-name: ${navAnimationOpacity};
   animation-duration: 2s;
   animation-iteration-count: 1;

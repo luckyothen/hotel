@@ -10,7 +10,7 @@ import { device } from '../../../themes/MediaDefaults';
 
 const AboutSectionStyled = styled.section`
   background-color: #00c3f9;
-  padding: 5rem 2rem;
+  padding: 5rem 6rem;
   
 `;
 
