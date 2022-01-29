@@ -3,12 +3,10 @@ import styled from "styled-components";
 import Container from "../../Controls/Container/Container";
 import HeaderTitle from "../HeaderTitle/HeaderTitle";
 import BookingBar from "../BookingBar/BookingBar";
-import { device } from '../../../themes/MediaDefaults';
-
-
+import { device } from "../../../themes/MediaDefaults";
 
 const HeaderStyled = styled.section`
-  padding-top:6%;
+  padding-top: 6%;
   background-image: linear-gradient(
     to right top,
     #9e5872,
@@ -20,19 +18,14 @@ const HeaderStyled = styled.section`
 
   height: 100%;
 
-  @media only screen and ${device.sm}{
-        height: 100%;
-        padding-top:16%;
-    
-          
-      }
-  
+  @media only screen and ${device.sm} {
+    height: 100%;
+    padding-top: 0%;
+  }
 `;
 
 function Header({ isInview, propRef }) {
-
   return (
-
     <HeaderStyled ref={propRef}>
       <Container>
         <HeaderTitle />

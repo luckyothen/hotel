@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import RoomCardOverviewSingle from "./RoomCardOverviewSingle";
-import { device } from '../../themes/MediaDefaults';
+import { device } from "../../themes/MediaDefaults";
 
 const RoomCardOverviewWrapper = styled.div`
   display: grid;
@@ -11,10 +11,9 @@ const RoomCardOverviewWrapper = styled.div`
   align-items: center;
   margin-top: 2rem;
 
-   @media only screen and ${device.sm}{
+  @media only screen and ${device.sm} {
     grid-template-columns: 1fr;
-     width: 100%;
- 
+    width: 100%;
   }
 `;
 
@@ -26,7 +25,9 @@ const data = [
 
 const overview = data.map((dt, index) => {
   return (
-    <RoomCardOverviewSingle image={dt.image} key = {index}>{dt.text}</RoomCardOverviewSingle>
+    <RoomCardOverviewSingle image={dt.image} key={index}>
+      {dt.text}
+    </RoomCardOverviewSingle>
   );
 });
 
