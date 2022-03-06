@@ -2,18 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../Controls/Button/Button";
 import { Link45deg } from "@styled-icons/bootstrap/Link45deg";
-import { device } from '../../themes/MediaDefaults';
+import { device } from "../../themes/MediaDefaults";
 
 const RoomCardOverviewSingleStyled = styled.div`
   background-color: #fafafa;
   border: 1px solid #edf9f9;
 
-   @media only screen and ${device.sm}{
-   margin-bottom: 2rem;
-
+  @media only screen and ${device.sm} {
+    margin-bottom: 2rem;
   }
-
-
 `;
 
 const ImageOverlayStyled = styled.div`
@@ -59,7 +56,7 @@ const CaptionWrapper = styled.div`
 
 const LinkChainStyled = styled(Link45deg)`
   color: #fff;
-  position: absolute;  
+  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);

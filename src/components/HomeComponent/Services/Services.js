@@ -5,7 +5,7 @@ import Subtitle from "../Subtitle/Subtitle";
 import SubtitleLargeText from "../Subtitle/SubtitleLargeText";
 import SubtitleSmallText from "../Subtitle/SubtitleSmallText";
 import houseMaidImage from "../../../assets/images/housemaid.jpg";
-import { device } from '../../../themes/MediaDefaults';
+import { device } from "../../../themes/MediaDefaults";
 
 const ServicesWrapperStyled = styled.section`
   background-color: #f5f5f5;
@@ -24,13 +24,12 @@ const ServicesInformationWrapperStyled = styled.div`
     height: 100%;
   }
 
-  @media only screen and ${device.sm}{
+  @media only screen and ${device.sm} {
     flex-direction: column;
     display: block;
-  
+
     > * {
       width: 100%;
-    
     }
   }
 `;
@@ -48,30 +47,28 @@ const ServicesListItemTitleStyled = styled.text`
 const ServicesIconStyled = styled.i`
   color: #f8c11d;
   text-align: center !important;
-   
+
   &:before {
     font-size: 2.5rem;
   }
 `;
 
 const PointedDivStyled = styled.div`
-  position:absolute;
+  position: absolute;
   left: -18px;
   top: 45%;
-  background-color: yellow ;
+  background-color: yellow;
   height: 10px;
   width: 10px;
-  max-width: 10px;  
+  max-width: 10px;
   transform: rotate(45deg);
   background-color: #333333;
-    display: none;
+  display: none;
   transition: 5s all ease-in-out;
 
-   @media only screen and ${device.lg}{
-      display: none;
-
+  @media only screen and ${device.lg} {
+    display: none;
   }
-
 `;
 
 const ServicesListItemStyled = styled.li`
@@ -82,8 +79,7 @@ const ServicesListItemStyled = styled.li`
   background-color: #fff;
   padding: 1rem;
   transition: 0.2s all ease-in-out;
- 
-  
+
   > *:first-child {
     width: 15%;
   }
@@ -101,32 +97,27 @@ const ServicesListItemStyled = styled.li`
     color: #fff;
   }
 
-   &:hover ${PointedDivStyled} {
+  &:hover ${PointedDivStyled} {
     display: block;
   }
 
-   @media only screen and ${device.sm}{
-      display: block;
-        > * {
+  @media only screen and ${device.sm} {
+    display: block;
+    > * {
       width: 100%;
     }
 
-     > *:first-child {
+    > *:first-child {
       width: 100%;
     }
 
-     &:hover ${PointedDivStyled} {
-    display: none;
+    &:hover ${PointedDivStyled} {
+      display: none;
+    }
   }
- 
-  }
-
-  
 `;
 
-const ImageServicesStyled = styled.img`
- 
-`;
+const ImageServicesStyled = styled.img``;
 
 const IconWrapper = styled.div`
 position: relative;
@@ -162,7 +153,7 @@ export default function Services() {
         <Subtitle>
           <SubtitleLargeText>OUR AWESOME SERVICES</SubtitleLargeText>
           <SubtitleSmallText>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            Lore ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
             ullamcorper suscipit.
@@ -182,7 +173,7 @@ export default function Services() {
                   Restaurant
                 </ServicesListItemTitleStyled>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  Lore ipsum dolor sit amet, consectetuer adipiscing elit, sed
                   diam nonummy nibh euismod tincidunt ut laoreet.
                 </p>
               </ServicesListItemTextStyled>
@@ -197,7 +188,7 @@ export default function Services() {
                   Spa - Beauty & Health
                 </ServicesListItemTitleStyled>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  Lore ipsum dolor sit amet, consectetuer adipiscing elit, sed
                   diam nonummy nibh euismod tincidunt ut laoreet.
                 </p>
               </ServicesListItemTextStyled>
@@ -212,7 +203,7 @@ export default function Services() {
                   Conference Room
                 </ServicesListItemTitleStyled>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  Lore ipsum dolor sit amet, consectetuer adipiscing elit, sed
                   diam nonummy nibh euismod tincidunt ut laoreet.
                 </p>
               </ServicesListItemTextStyled>
@@ -227,7 +218,7 @@ export default function Services() {
                   Swimming Pool
                 </ServicesListItemTitleStyled>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  Lore ipsum dolor sit amet, consectetuer adipiscing elit, sed
                   diam nonummy nibh euismod tincidunt ut laoreet.
                 </p>
               </ServicesListItemTextStyled>

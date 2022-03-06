@@ -6,8 +6,9 @@ import room1 from "../../assets/images/room.jpg";
 import { CupFill } from "@styled-icons/bootstrap/CupFill";
 import { SpoonKnife } from "@styled-icons/icomoon/SpoonKnife";
 import { Tv } from "@styled-icons/bootstrap/Tv";
-import { ZoomIn } from "@styled-icons/bootstrap/ZoomIn";
+import { Link45deg } from "@styled-icons/bootstrap/Link45deg";
 import { device } from "../../themes/MediaDefaults";
+import { Link } from "react-router-dom";
 
 const StyledRooms = styled.div`
   display: grid;
@@ -83,17 +84,20 @@ const StyledImageOverlay = styled.div`
   height: 100%;
   width: 100%;
 
-  background-color: rgba(141, 180, 211, 0.8);
   z-index: 10;
   transition: all 0.2s ease-in-out;
 
+  & > * {
+    display: none;
+  }
+
   &:hover {
-    background-color: rgba(161, 186, 210, 0);
+    background-color: rgba(141, 180, 211, 0.8);
     cursor: pointer;
   }
 
   &:hover > * {
-    display: none;
+    display: block;
   }
 `;
 
@@ -125,10 +129,10 @@ const StyledRoomText = styled.div`
   }
 `;
 
-const StyledZoomImageIcon = styled(ZoomIn)`
+const StyledZoomImageIcon = styled(Link45deg)`
   position: absolute;
-  top: 45%;
-  left: 50%;
+  top: 42%;
+  left: 47%;
   color: #fff !important;
 `;
 
@@ -140,10 +144,12 @@ function RoomList() {
         <StyledRooms>
           <StyledRoom>
             <StyledImageWrapper>
-              <StyledImageOverlay>
-                <StyledZoomImageIcon size="23" />
-              </StyledImageOverlay>
-              <StyledRoomImage src={room1} alt="" />
+              <Link to="/room">
+                <StyledImageOverlay>
+                  <StyledZoomImageIcon size="45" />
+                </StyledImageOverlay>
+                <StyledRoomImage src={room1} alt="" />
+              </Link>
             </StyledImageWrapper>
             <StyledRoomText>
               <StyledRoomTitleContainer>
@@ -151,7 +157,39 @@ function RoomList() {
                 <p>€89 / night</p>
               </StyledRoomTitleContainer>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                Lore, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                culpa non facere beatae minima fugit, eaque voluptates explicabo
+                aut sint?
+              </p>
+              <StyledContainerIcons>
+                <StyledWrapperIcon>
+                  <CupFill size="16" />
+                </StyledWrapperIcon>
+                <StyledWrapperIcon>
+                  <SpoonKnife size="16" />
+                </StyledWrapperIcon>
+                <StyledWrapperIcon>
+                  <Tv size="16" />
+                </StyledWrapperIcon>
+              </StyledContainerIcons>
+            </StyledRoomText>
+          </StyledRoom>
+          <StyledRoom>
+            <StyledImageWrapper>
+              <Link to="/room">
+                <StyledImageOverlay>
+                  <StyledZoomImageIcon size="45" />
+                </StyledImageOverlay>
+                <StyledRoomImage src={room1} alt="" />
+              </Link>
+            </StyledImageWrapper>
+            <StyledRoomText>
+              <StyledRoomTitleContainer>
+                <StyledRoomTitle>Single Room</StyledRoomTitle>
+                <p>€89 / night</p>
+              </StyledRoomTitleContainer>
+              <p>
+                Lore, ipsum dolor sit amet consectetur adipisicing elit. Ad
                 culpa non facere beatae minima fugit, eaque voluptates explicabo
                 aut sint?
               </p>
@@ -171,7 +209,7 @@ function RoomList() {
           <StyledRoom>
             <StyledImageWrapper>
               <StyledImageOverlay>
-                <StyledZoomImageIcon size="23" />
+                <StyledZoomImageIcon size="45" />
               </StyledImageOverlay>
               <StyledRoomImage src={room1} alt="" />
             </StyledImageWrapper>
@@ -181,7 +219,7 @@ function RoomList() {
                 <p>€89 / night</p>
               </StyledRoomTitleContainer>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                Lore, ipsum dolor sit amet consectetur adipisicing elit. Ad
                 culpa non facere beatae minima fugit, eaque voluptates explicabo
                 aut sint?
               </p>
@@ -201,7 +239,7 @@ function RoomList() {
           <StyledRoom>
             <StyledImageWrapper>
               <StyledImageOverlay>
-                <StyledZoomImageIcon size="23" />
+                <StyledZoomImageIcon size="45" />
               </StyledImageOverlay>
               <StyledRoomImage src={room1} alt="" />
             </StyledImageWrapper>
@@ -211,37 +249,7 @@ function RoomList() {
                 <p>€89 / night</p>
               </StyledRoomTitleContainer>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
-                culpa non facere beatae minima fugit, eaque voluptates explicabo
-                aut sint?
-              </p>
-              <StyledContainerIcons>
-                <StyledWrapperIcon>
-                  <CupFill size="16" />
-                </StyledWrapperIcon>
-                <StyledWrapperIcon>
-                  <SpoonKnife size="16" />
-                </StyledWrapperIcon>
-                <StyledWrapperIcon>
-                  <Tv size="16" />
-                </StyledWrapperIcon>
-              </StyledContainerIcons>
-            </StyledRoomText>
-          </StyledRoom>
-          <StyledRoom>
-            <StyledImageWrapper>
-              <StyledImageOverlay>
-                <StyledZoomImageIcon size="23" />
-              </StyledImageOverlay>
-              <StyledRoomImage src={room1} alt="" />
-            </StyledImageWrapper>
-            <StyledRoomText>
-              <StyledRoomTitleContainer>
-                <StyledRoomTitle>Single Room</StyledRoomTitle>
-                <p>€89 / night</p>
-              </StyledRoomTitleContainer>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                Lore, ipsum dolor sit amet consectetur adipisicing elit. Ad
                 culpa non facere beatae minima fugit, eaque voluptates explicabo
                 aut sint?
               </p>

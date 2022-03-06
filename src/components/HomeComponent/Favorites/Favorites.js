@@ -7,10 +7,9 @@ import SubtitleSmallText from "../Subtitle/SubtitleSmallText";
 import RoomCardOverviewList from "../../RoomCardOverview/RoomCardOverviewList";
 import Button from "../../Controls/Button/Button";
 
-
-const FavoritesWrapper = styled.section` 
+const FavoritesWrapper = styled.section`
   padding: 5rem 2rem;
-  margin-bottom: 7rem; 
+  margin-bottom: 7rem;
 `;
 
 const RoomListButtonWrapper = styled.div`
@@ -26,7 +25,7 @@ export default function Favorites({ children }) {
         <Subtitle>
           <SubtitleLargeText>OUR FAVORITE ROOMS</SubtitleLargeText>
           <SubtitleSmallText>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            Lore ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
             ullamcorper suscipit.

@@ -10,7 +10,7 @@ import { Telephone } from "@styled-icons/bootstrap/Telephone";
 import { Envelope } from "@styled-icons/bootstrap/Envelope";
 import GoogleMapReact from "google-map-react";
 import { LocationArrow } from "@styled-icons/typicons/LocationArrow";
-import { device } from '../../../themes/MediaDefaults';
+import { device } from "../../../themes/MediaDefaults";
 
 const ContactSectionStyled = styled.section`
   padding: 5rem 2rem;
@@ -22,9 +22,9 @@ const ContactWrapperStyled = styled.div`
   margin-top: 2rem;
   gap: 2rem;
 
-    @media only screen and ${device.sm}{
+  @media only screen and ${device.sm} {
     grid-template-columns: 1fr;
-     width: 100%;
+    width: 100%;
   }
 `;
 
@@ -77,9 +77,9 @@ const BadgesStyled = styled.div`
   gap: 1rem;
   margin-bottom: 1rem;
 
-    @media only screen and ${device.sm}{
+  @media only screen and ${device.sm} {
     flex-direction: column;
-     width: 100%;
+    width: 100%;
   }
 `;
 
@@ -93,7 +93,7 @@ const BadgesText = styled.p`
 const ButtonWrapperText = styled.div`
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 `;
 
 const defaultLocation = {
@@ -105,18 +105,16 @@ const defaultLocation = {
 };
 
 const ContactButtonStyled = styled(Button)`
-    @media only screen and ${device.sm}{
+  @media only screen and ${device.sm} {
     background-color: red;
-     width: 100% !important;
+    width: 100% !important;
   }
 `;
 
 const SubtitleStyled = styled(Subtitle)`
   text-align: center;
   margin: auto;
-
-`
-
+`;
 
 export default function Contact() {
   return (
@@ -125,7 +123,7 @@ export default function Contact() {
         <SubtitleStyled>
           <SubtitleLargeText>CONTACT US</SubtitleLargeText>
           <SubtitleSmallText>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            Lore ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
             ullamcorper suscipit.

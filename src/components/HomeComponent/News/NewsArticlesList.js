@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import NewsArticle from "./NewsArticle";
-import { device } from '../../../themes/MediaDefaults';
+import { device } from "../../../themes/MediaDefaults";
 
 const NewsArticlesWrapperStyled = styled.div`
   margin-top: 2rem;
@@ -9,53 +9,52 @@ const NewsArticlesWrapperStyled = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   color: #9db1c1;
-  
-   @media only screen and ${device.sm}{
-     display:block;
-     grid-template-columns: 1fr !important;
-   }
 
+  @media only screen and ${device.sm} {
+    display: block;
+    grid-template-columns: 1fr !important;
+  }
 `;
 
 const data = [
   {
     title: "Live your myth in Greece",
-    text: "Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore...",
+    text: "Lore ipsum dolor sit amet, cons ectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore...",
     image: "assets/images/greece.jpg",
     date: "August 21, 2021",
     user: "JOHN DOE",
   },
   {
     title: "Live your myth in Greece",
-    text: "Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore...",
+    text: "Lore ipsum dolor sit amet, cons ectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore...",
     image: "assets/images/greece.jpg",
     date: "August 21, 2021",
     user: "JOHN DOE",
   },
   {
     title: "Live your myth in Greece",
-    text: "Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore...",
+    text: "Lore ipsum dolor sit amet, cons ectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore...",
     image: "assets/images/greece.jpg",
     date: "August 21, 2021",
     user: "JOHN DOE",
   },
   {
     title: "Live your myth in Greece",
-    text: "Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore...",
+    text: "Lore ipsum dolor sit amet, cons ectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore...",
     image: "assets/images/greece.jpg",
     date: "August 21, 2021",
     user: "JOHN DOE",
   },
   {
     title: "Live your myth in Greece",
-    text: "Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore...",
+    text: "Lore ipsum dolor sit amet, cons ectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore...",
     image: "assets/images/greece.jpg",
     date: "August 21, 2021",
     user: "JOHN DOE",
   },
   {
     title: "Live your myth in Greece",
-    text: "Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore...",
+    text: "Lore ipsum dolor sit amet, cons ectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore...",
     image: "assets/images/greece.jpg",
     date: "August 21, 2021",
     user: "JOHN DOE",
