@@ -10,7 +10,7 @@ import { Telephone } from "@styled-icons/bootstrap/Telephone";
 import { device } from "../../../themes/MediaDefaults";
 
 const FooterStyled = styled.footer`
-  padding: 5rem 2rem;
+  padding: 5rem 0;
   background-color: #f9f9f9;
 `;
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../../Controls/Button/Button";
-import { device } from '../../../themes/MediaDefaults';
+import { device } from "../../../themes/MediaDefaults";
 
 const BookingBarStyled = styled.div`
   background-color: #fff;
@@ -13,9 +13,9 @@ const BookingBarStyled = styled.div`
     width: 100%;
   }
 
-   @media only screen and ${device.sm}{
-          display:none;
-        }
+  @media only screen and ${device.sm} {
+    display: none;
+  }
 `;
 
 const InputStyled = styled.input`

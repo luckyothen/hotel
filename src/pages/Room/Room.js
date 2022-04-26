@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Container from "../../components/Controls/Container/Container";
 import RoomListMainHeader from "../../components/RoomListComponent/RoomListMainHeader/RoomListMainHeader";
 import room1 from "../../assets/images/room.jpg";
-import roomThumbnail from "../../assets/images/double.jpg";
+
 import { ZoomIn } from "@styled-icons/bootstrap/ZoomIn";
 import { Check } from "@styled-icons/bootstrap/Check";
 import { Times } from "@styled-icons/fa-solid/Times";
@@ -12,6 +12,7 @@ import Button from "../../components/Controls/Button/Button";
 import { ArrowheadRight } from "@styled-icons/evaicons-solid/ArrowheadRight";
 import { TelephoneFill } from "@styled-icons/bootstrap/TelephoneFill";
 import { Envelope } from "@styled-icons/bootstrap/Envelope";
+import { Calendar } from "@styled-icons/bootstrap/Calendar";
 
 const RoomWrapper = styled.div`
   display: grid;
@@ -179,19 +180,25 @@ const BookFormInputText = styled.input`
 `;
 
 const BoomFormSelect = styled.select`
+  border: 1px solid #e9e7e7;
   padding: 0.8rem;
   width: 100%;
   display: block;
   margin-bottom: 1.5rem;
   outline: none;
   color: #b6b6b6;
+  background-color: #fff;
 
   & > * {
-    border: 1px solid red;
+    border: 1px solid #d0cdcd;
   }
 
   &::placeholder {
     color: #d4d4d4;
+  }
+
+  &:focus {
+    border-color: #d0cdcd;
   }
 `;
 
@@ -255,29 +262,64 @@ const SideMenuContactInformationWrapper = styled.div`
   margin-top: 0.4rem;
 `;
 
-const LatestPostLists = styled.ul`
-  list-style: none;
+const LatestPostWrapper = styled.div`
+  margin-top: 1.2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 1fr;
+`;
+
+const LatestPostTextWrapper = styled.div`
+  display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 1rem;
 `;
 
-const LatestPostItem = styled.li`
+const LatestPostTitle = styled.p`
+  justify-self: flex-start;
+  align-items: flex-start;
+  color: #9fb0c2;
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+`;
+
+const LatestPostDateWrapper = styled.div`
   display: flex;
+  justify-self: flex-start;
+  align-items: center;
+  color: #9d9d9d;
   gap: 0.5rem;
-  flex-direction: row;
 `;
 
-const StyledRoomThumbail = styled(roomThumbnail)`
-  width: 100px !important;
-  height: 80px !important;
+const LatestPostDate = styled.span`
+  font-size: 1rem;
 `;
 
 const data = [
-  { text: "Single Bed", image: "../../assets/images/single.jpg" },
-  { text: "Double Bed", image: "../../assets/images/double.jpg" },
-  { text: "Deluxe Bed", image: "../../assets/images/deluxe.jpg" },
+  {
+    text: "Single Bed",
+    image: "../../assets/images/single.jpg",
+    title: "Live your myth in Greece",
+    date: "23/11/2017",
+  },
+  {
+    text: "Double Bed",
+    image: "../../assets/images/double.jpg",
+    title: "Hotel Zogo in picture",
+    date: "27/11/2011",
+  },
+  {
+    text: "Deluxe Bed",
+    image: "../../assets/images/deluxe.jpg",
+    title: " Hotel Zante weddings",
+    date: "3/11/2003",
+  },
 ];
 
 const overview = data.map((dt, index) => {
@@ -289,6 +331,29 @@ const overview = data.map((dt, index) => {
         <StyledZoomImageIcon size="15" />
       </MainImageOverlay>
     </MultipleImageWrapper>
+  );
+});
+
+const latestPosts = data.map((dt, index) => {
+  return (
+    <LatestPostWrapper>
+      <MultipleImageWrapper>
+        <MultipleImageStyled src={dt.image} key={index} alt={index} />
+        <MainImageOverlay>
+          {" "}
+          <StyledZoomImageIcon size="15" />
+        </MainImageOverlay>
+      </MultipleImageWrapper>
+      <LatestPostTextWrapper>
+        <LatestPostTitle>{dt.title}</LatestPostTitle>
+        <LatestPostDateWrapper>
+          <span>
+            <Calendar size="14" />
+          </span>
+          <LatestPostDate>{dt.date}</LatestPostDate>
+        </LatestPostDateWrapper>
+      </LatestPostTextWrapper>
+    </LatestPostWrapper>
   );
 });
 
@@ -466,15 +531,7 @@ function Room() {
               </StyledIconWrapper>
               <SideMenuTitle>Latest Posts</SideMenuTitle>
             </SideMenuTitleWrapper>
-            <LatestPostLists>
-              <LatestPostItem>
-                <img
-                  src={StyledRoomThumbail}
-                  alt=""
-                  srcset={StyledRoomThumbail}
-                />
-              </LatestPostItem>
-            </LatestPostLists>
+            <div>{latestPosts}</div>
           </aside>
         </RoomWrapper>
       </Container>

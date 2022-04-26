@@ -10,6 +10,8 @@ import { Link45deg } from "@styled-icons/bootstrap/Link45deg";
 import { device } from "../../themes/MediaDefaults";
 import { Link } from "react-router-dom";
 
+//TODO: Sticky when user scroll down nav
+
 const StyledRooms = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);

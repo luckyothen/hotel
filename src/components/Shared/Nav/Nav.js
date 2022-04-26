@@ -10,7 +10,7 @@ import { uiActions } from "../../../redux/reducers/ui-reducer";
 import { useDispatch } from "react-redux";
 
 const navAnimationOpacity = keyframes`
- 0% { top: -100px; opacity: .5}   
+ 0% { top: 0; opacity: .5}   
  100% { top: 0; opacity: 1 }
 `;
 let NavWrapperSticky = styled.nav`
@@ -18,19 +18,19 @@ let NavWrapperSticky = styled.nav`
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  transition: 0.6s all ease-in;
+
   background-color: ${({ navBackgroundColor }) =>
     navBackgroundColor || "transparent"};
   position: ${({ position }) => position || "fixed"};
   top: 0;
   left: 0;
   width: 100%;
-  transition: 0.6s all ease-in;
+
   z-index: 999999;
   padding: 1rem 7rem;
-  animation-name: ${navAnimationOpacity};
+  /* animation-name: ${navAnimationOpacity};
   animation-duration: 2s;
-  animation-iteration-count: 1;
+  animation-iteration-count: 1; */
 
   /* CHange background color when scrolled down */
   ${({ backgroundImage }) =>
@@ -44,8 +44,8 @@ let NavWrapperSticky = styled.nav`
         #905c93,
         #855f7e
       );
-      box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-        rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+      transition: 0.6s all ease-in;
     `}
 
   @media only screen and ${device.sm} {
